@@ -97,5 +97,5 @@ function Column(props) {
 }
 
 export default memo(Column, (prev, cur) => {
-	// return JSON.stringify(cur) === JSON.stringify(prev)
+	return JSON.stringify(cur) === JSON.stringify(prev)
 })
