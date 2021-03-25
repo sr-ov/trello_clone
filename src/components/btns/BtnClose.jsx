@@ -1,5 +1,5 @@
-import './style.css'
 import close from '../../icons/close.svg'
+import './style.css'
 
 function BtnClose({ func }) {
 	return (

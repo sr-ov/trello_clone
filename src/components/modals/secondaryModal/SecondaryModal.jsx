@@ -1,23 +1,18 @@
 import { memo, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-//
-import './style.css'
-// import { closeAction } from '../../../store/reducers/otherReducer'
-
-import { Inner, InnerDel, InnerColActions, CopyColInner, Header } from '.'
+import { CopyColInner, Header, Inner, InnerColActions, InnerDel } from '.'
+import { useOnClickOutside } from '../../../customHooks/useOnClickOutside'
+import { useTextArea } from '../../../customHooks/useTextArea'
+import { setComponentIdAction, toggleModalsAction } from '../../../store/reducers/anyReducer'
 import {
+	changeColsSelectAction,
+	changeNotesSelectAction,
+	copyColAction,
 	copyNoteAction,
 	delAction,
 	moveNoteAction,
-	copyColAction,
-	changeColsSelectAction,
-	changeNotesSelectAction,
 } from '../../../store/reducers/dataReducer'
-
-import { toggleModalsAction, setComponentIdAction } from '../../../store/reducers/anyReducer'
-
-import { useOnClickOutside } from '../../../customHooks/useOnClickOutside'
-import { useTextArea } from '../../../customHooks/useTextArea'
+import './style.css'
 
 function SecondaryModal() {
 	const refModal = useRef()

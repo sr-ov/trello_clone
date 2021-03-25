@@ -1,30 +1,27 @@
 import { memo, useRef, useState } from 'react'
 import { Draggable } from 'react-beautiful-dnd'
 import { useDispatch, useSelector } from 'react-redux'
-
-import { Notes } from '../notes'
 import { ColumnFooter, ColumnHeader } from '.'
+import { getCoords } from '../../App'
 import { useTextArea } from '../../customHooks/useTextArea'
-
-import {
-	openAddNewModalAction,
-	setItemInModalAction,
-	setSelectsAction,
-} from '../../store/reducers/dataReducer'
-
 import {
 	setComponentIdAction,
 	setCoordsAction,
 	toggleModalsAction,
 } from '../../store/reducers/anyReducer'
-import { getCoords } from '../../App'
+import {
+	openAddNewModalAction,
+	setItemInModalAction,
+	setSelectsAction,
+} from '../../store/reducers/dataReducer'
+import { Notes } from '../notes'
 
 function ColumnInner({ id, titleCol, notes, dragHandleProps }) {
 	const dispatch = useDispatch()
 	const [maskClick, setMaskClick] = useState(false)
 	const openAddNewModal = useSelector(
 		({ dataReducer }) => dataReducer.openAddNewModal === id,
-		(cur, prev) => cur === prev,
+		(cur, prev) => cur === prev
 	)
 
 	const openMainModal = (idNote) => {
@@ -65,7 +62,7 @@ function ColumnInner({ id, titleCol, notes, dragHandleProps }) {
 				}}
 			/>
 
-			<Notes {...{ openMainModal, notes, id,titleCol }} />
+			<Notes {...{ openMainModal, notes, id }} />
 
 			<ColumnFooter
 				{...{

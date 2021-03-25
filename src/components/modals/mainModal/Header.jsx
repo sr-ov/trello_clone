@@ -1,6 +1,5 @@
 import { memo, useRef } from 'react'
 import title from '../../../icons/title.svg'
-
 import { BtnClose } from '../../btns'
 import { TextArea } from '../../textArea'
 

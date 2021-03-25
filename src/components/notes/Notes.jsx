@@ -1,10 +1,9 @@
 import { memo, useRef } from 'react'
 import { Droppable } from 'react-beautiful-dnd'
-
 import { Note } from '.'
 import './style.css'
 
-function Notes({ id, notes, openMainModal, titleCol }) {
+function Notes({ id, notes, openMainModal }) {
 	const ref = useRef()
 
 	return (

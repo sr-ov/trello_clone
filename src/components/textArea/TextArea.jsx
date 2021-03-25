@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
-
 import { changeTextAction } from '../../store/reducers/dataReducer'
 import './style.css'
 

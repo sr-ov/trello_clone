@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { addNewColAction } from '../../store/reducers/dataReducer'
 import { AddNewItemModal } from '../modals/addNewItemModal'
 

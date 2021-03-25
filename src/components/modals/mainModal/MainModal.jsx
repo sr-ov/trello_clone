@@ -1,20 +1,15 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-
-import desc from '../../../icons/product-description.svg'
-
 import { Header, Sidebar } from '.'
-import { TextArea } from '../../textArea'
-import { getFound } from '../../../store/reducers/dataReducer'
-
+import { getCoords } from '../../../App'
+import desc from '../../../icons/product-description.svg'
 import {
 	setComponentIdAction,
 	setCoordsAction,
 	toggleModalsAction,
 } from '../../../store/reducers/anyReducer'
-
-import { getCoords } from '../../../App'
-
+import { getFound } from '../../../store/reducers/dataReducer'
+import { TextArea } from '../../textArea'
 import './style.css'
 
 function MainModal() {

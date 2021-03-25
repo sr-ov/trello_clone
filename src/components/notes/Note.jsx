@@ -1,6 +1,5 @@
 import { memo } from 'react'
 import { Draggable } from 'react-beautiful-dnd'
-
 import desc from '../../icons/product-description.svg'
 
 function Note({ id, iNote, descNote, titleNote, openMainModal }) {

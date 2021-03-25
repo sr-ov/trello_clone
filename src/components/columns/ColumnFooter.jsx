@@ -1,7 +1,5 @@
 import { memo } from 'react'
-
 import { addNewNoteAction } from '../../store/reducers/dataReducer'
-
 import { AddNewItemModal } from '../modals/addNewItemModal'
 
 function ColumnFooter({ handler, ...props }) {

@@ -1,12 +1,12 @@
 import { memo, useCallback, useRef, useState } from 'react'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import { useDispatch, useSelector } from 'react-redux'
-
-import { dragAction } from '../../store/reducers/dataReducer'
 import { AddCol, Column } from '.'
-
-import './style.css'
 import { useTextArea } from '../../customHooks/useTextArea'
+import { dragAction } from '../../store/reducers/dataReducer'
+import './style.css'
+
+
 
 function Columns() {
 	const dispatch = useDispatch()

@@ -1,9 +1,7 @@
 import React from 'react'
-
 import copyIcon from '../../../icons/copy.svg'
 import deleteIcon from '../../../icons/delete.svg'
 import moveIcon from '../../../icons/rightArrow.svg'
-
 import { Button } from '../../btns'
 
 export const list = [

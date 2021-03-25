@@ -1,9 +1,8 @@
 import { memo, useEffect } from 'react'
 import cNs from 'classnames'
-
-import { TextArea } from '../textArea/'
-import { Button } from '../btns'
 import { useOnClickOutside } from '../../customHooks/useOnClickOutside'
+import { Button } from '../btns'
+import { TextArea } from '../textArea/'
 
 function ColumnHeader({
 	dragHandleProps,

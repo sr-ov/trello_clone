@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux'
-
-import { Button } from '../../btns'
 import { Selects } from '.'
+import { Button } from '../../btns'
 import { TextArea } from '../../textArea'
+
 
 function Inner({
 	func,
