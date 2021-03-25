@@ -1,6 +1,5 @@
 import { useOnClickOutside } from '../../../customHooks/useOnClickOutside'
-
-import { Button, BtnClose, BtnAdd } from '../../btns'
+import { BtnAdd, BtnClose, Button } from '../../btns'
 import { TextArea } from '../../textArea'
 
 function AddNewItemModal({
@@ -19,10 +18,7 @@ function AddNewItemModal({
 	return (
 		<>
 			{openAddNewModal ? (
-				<div
-					ref={refModal}
-					style={{ padding: addPadding && 10, minWidth: 240 }}
-				>
+				<div ref={refModal} style={{ padding: addPadding && 10, minWidth: 240 }}>
 					<TextArea textAreaRef={textAreaRef} {...props} />
 					<div style={{ display: 'flex', alignItems: 'center' }}>
 						<Button
