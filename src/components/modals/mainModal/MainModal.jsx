@@ -1,15 +1,14 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Header, Sidebar } from '.'
-import { getCoords } from '../../../App'
+import { TextArea } from '../../textArea'
+import { getCoords, getFound } from '../../../helpers'
 import desc from '../../../icons/product-description.svg'
 import {
 	setComponentIdAction,
 	setCoordsAction,
 	toggleModalsAction,
 } from '../../../store/reducers/anyReducer'
-import { getFound } from '../../../store/reducers/dataReducer'
-import { TextArea } from '../../textArea'
 import './style.css'
 
 function MainModal() {

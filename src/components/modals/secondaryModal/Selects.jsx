@@ -1,3 +1,5 @@
+import { addCur } from '../../../helpers'
+
 const Selects = ({ value, id, func, arr, labelText, ending }) => {
 	const change = (e) =>
 		func({
@@ -23,5 +25,3 @@ const Selects = ({ value, id, func, arr, labelText, ending }) => {
 	)
 }
 export default Selects
-
-const addCur = (check, text, ending) => (check ? `${text} ${ending}` : text)

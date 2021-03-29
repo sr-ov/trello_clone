@@ -3,7 +3,6 @@ import { Selects } from '.'
 import { Button } from '../../btns'
 import { TextArea } from '../../textArea'
 
-
 function Inner({
 	func,
 	text,
@@ -14,13 +13,7 @@ function Inner({
 	changeSelectsNotes,
 }) {
 	const data = useSelector(({ dataReducer }) => {
-		const {
-			notes,
-			selectCols,
-			selectNotes,
-			idNote,
-			idCol,
-		} = dataReducer.selects
+		const { notes, selectCols, selectNotes, idNote, idCol } = dataReducer.selects
 
 		const checkMove = move && idCol === selectCols
 

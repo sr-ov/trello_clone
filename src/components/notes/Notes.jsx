@@ -1,6 +1,7 @@
 import { memo, useRef } from 'react'
 import { Droppable } from 'react-beautiful-dnd'
 import { Note } from '.'
+import { getStyles } from '../../helpers'
 import './style.css'
 
 function Notes({ id, notes, openMainModal }) {
@@ -38,14 +39,3 @@ function Notes({ id, notes, openMainModal }) {
 export default memo(Notes, (cur, prev) => {
 	return cur.notes === prev.notes
 })
-
-const getStyles = (idHover, idStart, ref) => {
-	if (idHover !== idStart) {
-		const minHeight =
-			ref.current.clientHeight +
-			document.querySelector(`[data-id="${idHover}"]`).clientHeight +
-			10
-		return minHeight
-	}
-	return 15
-}

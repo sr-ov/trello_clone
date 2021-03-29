@@ -2,8 +2,8 @@ import { memo, useRef, useState } from 'react'
 import { Draggable } from 'react-beautiful-dnd'
 import { useDispatch, useSelector } from 'react-redux'
 import { ColumnFooter, ColumnHeader } from '.'
-import { getCoords } from '../../App'
 import { useTextArea } from '../../customHooks/useTextArea'
+import { getCoords } from '../../helpers'
 import {
 	setComponentIdAction,
 	setCoordsAction,

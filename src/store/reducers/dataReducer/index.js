@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { v4 as uuidv4 } from 'uuid'
-
+import { array, getFound } from '../../../helpers'
 import { initialState } from './initialState'
 
 const dataReducer = createSlice({
@@ -47,10 +47,10 @@ const dataReducer = createSlice({
 				idCol,
 				idNote,
 				notes,
-				selectCols: idCol,
-				selectNotes: idNote,
 				indexNote,
 				indexCol,
+				selectCols: idCol,
+				selectNotes: idNote,
 			}
 		},
 
@@ -79,20 +79,6 @@ const dataReducer = createSlice({
 			}
 		},
 
-		copyColAction: ({ inModal, columns }, { payload: val }) => {
-			const { arr, el, i } = getFound(columns, inModal)
-
-			const notes = el.notes.map((el) => ({ ...el, id: uuidv4() }))
-			const colCopy = { id: uuidv4(), titleCol: val, notes }
-
-			array().addTo(i + 1, arr, colCopy)
-		},
-
-		delAction: ({ columns, inModal }) => {
-			const { arr, i } = getFound(columns, inModal)
-			arr.splice(i, 1)
-		},
-
 		copyNoteAction: ({ selects, columns }, { payload: val }) => {
 			const { idNote, indexNote, selectCols } = selects
 			const { el } = getFound(columns, idNote)
@@ -107,26 +93,40 @@ const dataReducer = createSlice({
 			const { arr, i } = getFound(state.columns, idNote)
 			const { notes } = getFound(state.columns, selectCols).el
 
-			array(i, arr).del().addTo(indexNote, notes)
+			array().del(i, arr).addTo(indexNote, notes)
 
 			state.selects = {
 				...state.selects,
+				notes,
 				idCol: selectCols,
 				selectNotes: idNote,
-				notes,
 			}
+		},
+
+		copyColAction: ({ inModal, columns }, { payload: val }) => {
+			const { arr, el, i } = getFound(columns, inModal)
+
+			const notes = el.notes.map((el) => ({ ...el, id: uuidv4() }))
+			const colCopy = { id: uuidv4(), titleCol: val, notes }
+
+			array().addTo(i + 1, arr, colCopy)
+		},
+
+		delAction: ({ columns, inModal }) => {
+			const { arr, i } = getFound(columns, inModal)
+			arr.splice(i, 1)
 		},
 
 		dragAction: ({ columns }, { payload }) => {
 			const { type, startI, hoverI, startDropId, hoverDropId } = payload
 
 			if (type === 'columns') {
-				array(startI, columns).del().addTo(hoverI)
+				array().del(startI, columns).addTo(hoverI, columns)
 			} else {
 				const curNotes = getFound(columns, startDropId).el.notes
 				const { notes } = getFound(columns, hoverDropId).el
 
-				array(startI, curNotes).del().addTo(hoverI, notes)
+				array().del(startI, curNotes).addTo(hoverI, notes)
 			}
 		},
 	},
@@ -149,31 +149,3 @@ export const {
 	moveNoteAction,
 	dragAction,
 } = dataReducer.actions
-
-const array = (i, arr = []) => ({
-	saveEl: arr[i],
-	del(iDel = i, arrDel = arr) {
-		arrDel.splice(iDel, 1)
-		return this
-	},
-	addTo(iAdd = i, arrAdd = arr, addEl = this.saveEl) {
-		arrAdd.splice(iAdd, 0, addEl)
-		return this
-	},
-})
-
-export const getFound = (arr, id, found = []) => {
-	for (let i = 0; i < arr.length; i++) {
-		if (id === arr[i].id) {
-			found.push({ i, arr, el: arr[i] })
-		}
-
-		if (arr[i].notes) {
-			getFound(arr[i].notes, id, found)
-		}
-
-		if (found.length) {
-			return found[0]
-		}
-	}
-}

@@ -13,10 +13,3 @@ function App() {
 }
 
 export default App
-
-export const getCoords = (e) => {
-	return {
-		left: ~~e.target.getBoundingClientRect().left,
-		top: ~~e.target.getBoundingClientRect().top,
-	}
-}

@@ -6,8 +6,6 @@ import { useTextArea } from '../../customHooks/useTextArea'
 import { dragAction } from '../../store/reducers/dataReducer'
 import './style.css'
 
-
-
 function Columns() {
 	const dispatch = useDispatch()
 	const [openAddNewModal, setOpenAddNewModal] = useState(false)
