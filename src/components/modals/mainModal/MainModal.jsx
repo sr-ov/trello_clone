@@ -21,13 +21,13 @@ function MainModal() {
 
 	const openSecModal = (i) => (e) => {
 		dispatch(setCoordsAction(getCoords(e)))
-		dispatch(toggleModalsAction({ key: 'sec', val: true }))
+		dispatch(toggleModalsAction({ sec: true }))
 		dispatch(setComponentIdAction({ name: 'note', i }))
 	}
 
 	const closeModal = (e) => {
 		if (e.target === e.currentTarget) {
-			dispatch(toggleModalsAction({ key: 'main', val: false }))
+			dispatch(toggleModalsAction({ main: false }))
 		}
 	}
 

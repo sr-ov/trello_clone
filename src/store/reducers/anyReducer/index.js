@@ -8,9 +8,8 @@ const anyReducer = createSlice({
 		componentId: {},
 	},
 	reducers: {
-		toggleModalsAction: ({ modals }, { payload }) => {
-			const { key, val } = payload
-			modals[key] = val
+		toggleModalsAction: (state, { payload }) => {
+			state.modals = { ...state.modals, ...payload }
 		},
 
 		setCoordsAction: (state, { payload }) => {
@@ -25,8 +24,4 @@ const anyReducer = createSlice({
 
 export default anyReducer.reducer
 
-export const {
-	toggleModalsAction,
-	setCoordsAction,
-	setComponentIdAction,
-} = anyReducer.actions
+export const { toggleModalsAction, setCoordsAction, setComponentIdAction } = anyReducer.actions

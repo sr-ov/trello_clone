@@ -26,14 +26,14 @@ function ColumnInner({ id, titleCol, notes, dragHandleProps }) {
 
 	const openMainModal = (idNote) => {
 		dispatch(setItemInModalAction(idNote))
-		dispatch(toggleModalsAction({ val: true, key: 'main' }))
+		dispatch(toggleModalsAction({ main: true }))
 		dispatch(setSelectsAction({ idCol: id, idNote }))
 	}
 
 	const openSecModal = (e) => {
 		dispatch(setCoordsAction(getCoords(e)))
 		dispatch(setComponentIdAction({ name: 'colActions', i: 0 }))
-		dispatch(toggleModalsAction({ val: true, key: 'sec' }))
+		dispatch(toggleModalsAction({ sec: true }))
 		dispatch(setItemInModalAction(id))
 	}
 

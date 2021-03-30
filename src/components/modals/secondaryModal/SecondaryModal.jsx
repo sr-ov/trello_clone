@@ -5,8 +5,8 @@ import { useOnClickOutside } from '../../../customHooks/useOnClickOutside'
 import { useTextArea } from '../../../customHooks/useTextArea'
 import { setComponentIdAction, toggleModalsAction } from '../../../store/reducers/anyReducer'
 import {
-	changeColsSelectAction,
-	changeNotesSelectAction,
+	changeColsValueAction,
+	changeNotesValueAction,
 	copyColAction,
 	copyNoteAction,
 	delAction,
@@ -20,7 +20,7 @@ function SecondaryModal() {
 	const coords = useSelector(({ anyReducer }) => anyReducer.coords)
 	const { name, i } = useSelector(({ anyReducer }) => anyReducer.componentId)
 
-	const close = () => dispatch(toggleModalsAction({ key: 'sec', val: false }))
+	const close = () => dispatch(toggleModalsAction({ sec: false }))
 
 	useOnClickOutside(refModal, close)
 
@@ -31,9 +31,9 @@ function SecondaryModal() {
 		fn()
 	}
 
-	const changeSelects = {
-		changeSelectsCols: (payload) => dispatch(changeColsSelectAction(payload)),
-		changeSelectsNotes: (payload) => dispatch(changeNotesSelectAction(payload)),
+	const changeValue = {
+		changeColsValue: (payload) => dispatch(changeColsValueAction(payload)),
+		changeNotesValue: (payload) => dispatch(changeNotesValueAction(payload)),
 	}
 
 	const components = {
@@ -43,7 +43,7 @@ function SecondaryModal() {
 					<Inner
 						func={action(() => dispatch(moveNoteAction()))}
 						text="Переместить"
-						{...changeSelects}
+						{...changeValue}
 						move
 					/>
 				),
@@ -55,7 +55,7 @@ function SecondaryModal() {
 						func={action(() => handler(copyNoteAction))}
 						text="Копировать"
 						textAreaRef={textAreaRef}
-						{...changeSelects}
+						{...changeValue}
 						showTextArea
 					/>
 				),
@@ -66,7 +66,7 @@ function SecondaryModal() {
 					<InnerDel
 						del={action(() => {
 							dispatch(delAction())
-							dispatch(toggleModalsAction({ key: 'main', val: false }))
+							dispatch(toggleModalsAction({ main: false }))
 						})}
 						close={close}
 					/>

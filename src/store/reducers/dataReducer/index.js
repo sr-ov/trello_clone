@@ -54,7 +54,7 @@ const dataReducer = createSlice({
 			}
 		},
 
-		changeColsSelectAction: (state, { payload }) => {
+		changeColsValueAction: (state, { payload }) => {
 			const { val, index } = payload
 			const check = state.selects.idCol === val
 			const { notes } = getFound(state.columns, val).el
@@ -69,7 +69,7 @@ const dataReducer = createSlice({
 			}
 		},
 
-		changeNotesSelectAction: (state, { payload }) => {
+		changeNotesValueAction: (state, { payload }) => {
 			const { val, index } = payload
 
 			state.selects = {
@@ -140,8 +140,8 @@ export const {
 	openAddNewModalAction,
 	setItemInModalAction,
 	setSelectsAction,
-	changeColsSelectAction,
-	changeNotesSelectAction,
+	changeColsValueAction,
+	changeNotesValueAction,
 	changeTextAction,
 	delAction,
 	copyColAction,

@@ -3,15 +3,7 @@ import { Selects } from '.'
 import { Button } from '../../btns'
 import { TextArea } from '../../textArea'
 
-function Inner({
-	func,
-	text,
-	move,
-	showTextArea,
-	textAreaRef,
-	changeSelectsCols,
-	changeSelectsNotes,
-}) {
+function Inner({ func, text, move, showTextArea, textAreaRef, changeColsValue, changeNotesValue }) {
 	const data = useSelector(({ dataReducer }) => {
 		const { notes, selectCols, selectNotes, idNote, idCol } = dataReducer.selects
 
@@ -21,7 +13,7 @@ function Inner({
 			{
 				arr: dataReducer.columns,
 				value: selectCols,
-				func: changeSelectsCols,
+				func: changeColsValue,
 				id: idCol,
 				labelText: 'Список',
 				ending: 'текущий',
@@ -29,7 +21,7 @@ function Inner({
 			{
 				arr: checkMove ? notes : notes.concat({ id: 'bottom' }),
 				value: selectNotes,
-				func: changeSelectsNotes,
+				func: changeNotesValue,
 				id: idNote,
 				labelText: 'Позиция',
 				ending: 'текущая',
