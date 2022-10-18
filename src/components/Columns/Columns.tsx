@@ -1,13 +1,13 @@
-import { memo, useCallback, useRef } from 'react'
-import { DragDropContext, Droppable, DropResult } from 'react-beautiful-dnd'
+import { memo, useCallback } from 'react'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import { v4 as uuidv4 } from 'uuid'
 
 import { AddNewItem, Column, NoteModal } from '..'
 import { useActions, useAppSelector } from '../../hooks'
 import { selectIsOpenNoteModal } from '../../store/noteModal/selectors'
-import { selectColumns, selectCurrentItem } from '../../store/data/selectors'
-import styles from './Columns.module.css'
+import { selectColumns } from '../../store/data/selectors'
 import { useDragDrop } from './useDragDrop'
+import styles from './Columns.module.css'
 
 function Columns() {
 	const { addNewColumnAction, toggleNoteModal } = useActions()
