@@ -1,6 +1,6 @@
-import cn from 'classnames'
 import { memo } from 'react'
 import { ButtonProps } from 'react-html-props'
+import cn from 'classnames'
 
 import styles from './Button.module.css'
 

@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { DivProps } from 'react-html-props'
 import cn from 'classnames'
+import { Portal } from 'react-portal'
 
 import styles from './ModalLg.module.css'
-import { Portal } from 'react-portal'
 
 interface ModalLgProps extends DivProps {}
 
