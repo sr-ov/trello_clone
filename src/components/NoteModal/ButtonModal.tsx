@@ -6,8 +6,8 @@ import { useClickAway } from '../../hooks'
 import ModalContent from './ModalContent'
 import Copy from './Copy'
 import Replace from './Replace'
-import styles from './ButtonModal.module.css'
 import { useButtonModal } from './useButtonModals'
+import styles from './ButtonModal.module.css'
 
 interface ButtonModalProps extends DivProps {
 	index: number
