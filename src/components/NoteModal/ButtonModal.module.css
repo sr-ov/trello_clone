@@ -1,0 +1,43 @@
+.wrapper {
+	position: relative;
+}
+.wrapper + .wrapper {
+	margin-top: 10px;
+}
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.button {
+	gap: 10px;
+	justify-content: start !important;
+}
+
+.header {
+	margin-bottom: 20px;
+}
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 25px;
+}
+.title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.titleSm {
+	font-size: 18px;
+}
+
+.body {
+	display: grid;
+	grid-template-columns: 1fr 25%;
+	gap: 20px;
+}

@@ -1,0 +1,48 @@
+.column-header {
+	display: flex;
+	background: #f1f1f1;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-radius: inherit;
+}
+
+.header-wrapper {
+	padding-top: 10px;
+	position: relative;
+	width: 100%;
+}
+
+.mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: transparent;
+	width: 100%;
+	z-index: 5;
+	cursor: pointer;
+}
+.mask.hide {
+	z-index: -100;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.modal {
+	top: 50%;
+	left: 50%;
+}
+
+.buttonDots {
+	padding: 0 !important;
+	width: 25px !important;
+	height: 25px;
+	margin-left: 10px;
+	margin-top: 10px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

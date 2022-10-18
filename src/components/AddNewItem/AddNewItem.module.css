@@ -1,0 +1,8 @@
+.withPadding {
+	padding: 10px;
+}
+
+.buttonsWrapper {
+	display: flex;
+	align-items: center;
+}

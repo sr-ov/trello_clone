@@ -1,0 +1,19 @@
+.column-notes {
+	padding: 0 15px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin-bottom: -8px;
+}
+
+.column-notes::-webkit-scrollbar {
+	width: 5px;
+	background-color: transparent;
+}
+
+.column-notes::-webkit-scrollbar-thumb {
+	background-color: #b5b5b5;
+}
+
+.notesWrapper {
+	min-height: 10px;
+}

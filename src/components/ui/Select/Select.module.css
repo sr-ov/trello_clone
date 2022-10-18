@@ -1,0 +1,19 @@
+.wrapper {
+}
+.wrapper + .wrapper {
+	margin-top: 14px;
+}
+.label,
+.select {
+	font-size: 14px;
+}
+.label {
+	margin-bottom: 8px;
+}
+.select {
+	padding: 10px 5px;
+	display: block;
+	width: 100%;
+	border-radius: 4px;
+	cursor: pointer;
+}

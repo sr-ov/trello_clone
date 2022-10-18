@@ -1,0 +1,18 @@
+.modalSm {
+	min-width: 250px;
+	position: absolute;
+	background-color: #f1f1f1;
+	padding: 10px;
+	padding-bottom: 15px;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	z-index: 1000;
+	box-shadow: 0 8px 16px -4px rgba(9, 30, 66, 0.25), 0 0 0 1px rgba(9, 30, 66, 0.08);
+}
+.modalSm__header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
