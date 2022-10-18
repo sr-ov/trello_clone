@@ -3,10 +3,7 @@ import { createSelector } from '@reduxjs/toolkit'
 import { RootState } from '..'
 import { addLastOption } from '../../utils'
 
-export const selectColumns = ({ data }: RootState) => {
-	console.log('selectColumns')
-	return data.columns
-}
+export const selectColumns = ({ data }: RootState) => data.columns
 export const selectCurrentItem = ({ data }: RootState) => data.currentItem
 
 export const selectNotes = createSelector(
