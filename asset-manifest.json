@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/trello_clone/static/css/main.18a99c63.chunk.css",
+    "main.js": "/trello_clone/static/js/main.f94d75b4.chunk.js",
+    "main.js.map": "/trello_clone/static/js/main.f94d75b4.chunk.js.map",
+    "runtime-main.js": "/trello_clone/static/js/runtime-main.b6a75450.js",
+    "runtime-main.js.map": "/trello_clone/static/js/runtime-main.b6a75450.js.map",
+    "static/js/2.be4429e7.chunk.js": "/trello_clone/static/js/2.be4429e7.chunk.js",
+    "static/js/2.be4429e7.chunk.js.map": "/trello_clone/static/js/2.be4429e7.chunk.js.map",
+    "index.html": "/trello_clone/index.html",
+    "static/css/main.18a99c63.chunk.css.map": "/trello_clone/static/css/main.18a99c63.chunk.css.map",
+    "static/js/2.be4429e7.chunk.js.LICENSE.txt": "/trello_clone/static/js/2.be4429e7.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/trello_clone/static/media/bg.20703b28.jpg",
+    "static/media/close.10fa8da4.svg": "/trello_clone/static/media/close.10fa8da4.svg",
+    "static/media/copy.565d125c.svg": "/trello_clone/static/media/copy.565d125c.svg",
+    "static/media/delete.e4efcb06.svg": "/trello_clone/static/media/delete.e4efcb06.svg",
+    "static/media/dots.8c79c51a.svg": "/trello_clone/static/media/dots.8c79c51a.svg",
+    "static/media/product-description.9355addd.svg": "/trello_clone/static/media/product-description.9355addd.svg",
+    "static/media/right-arrow.78d5427a.svg": "/trello_clone/static/media/right-arrow.78d5427a.svg",
+    "static/media/title.c34b62e5.svg": "/trello_clone/static/media/title.c34b62e5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b6a75450.js",
+    "static/js/2.be4429e7.chunk.js",
+    "static/css/main.18a99c63.chunk.css",
+    "static/js/main.f94d75b4.chunk.js"
+  ]
+}
